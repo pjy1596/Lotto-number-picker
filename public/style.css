@@ -139,4 +139,8 @@ dd {
   body {
     transform: scale(0.7);
   }
+  .num.win,
+  .num.bonus {
+    background-color: transparent;
+  }
 }
