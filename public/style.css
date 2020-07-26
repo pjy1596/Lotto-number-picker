@@ -126,3 +126,17 @@ dd {
     transform: scale(0.7);
   }
 }
+@media only screen and (max-width: 300px) {
+  .win_result {
+    display: flex;
+    flex-direction: column;
+  }
+  .nums {
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-10%) scaleX(0.7);
+  }
+  body {
+    transform: scale(0.7);
+  }
+}
