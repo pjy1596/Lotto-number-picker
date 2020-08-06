@@ -12,12 +12,12 @@ for (var i = 1; i <= 45; i++) {
   numbers.push(i);
 }
 // let pickNumbers = [];
-const n = 7;
+const n = 6;
 const sample = numbers
   .map((x) => ({ x, r: Math.random() }))
   .sort((a, b) => a.r - b.r)
   .map((a) => a.x)
-  .slice(0, 7);
+  .slice(0, 6);
 // pickNumbers.push(sample);
 // array 안에 또 array 들어가 있었음. 이 위에 라인 때문에.
 sample.sort((a, b) => {
@@ -25,13 +25,20 @@ sample.sort((a, b) => {
 });
 console.log(sample);
 
+bonusNumber = +Math.floor(Math.random() * 45 + 1);
+if (sample.includes(bonusNumber)) {
+  bonusNumber = +Math.floor(Math.random() * 45 + 1);
+} else {
+  console.log("no problem");
+}
+
 ball1.innerText = sample[0];
 ball2.innerText = sample[1];
 ball3.innerText = sample[2];
 ball4.innerText = sample[3];
 ball5.innerText = sample[4];
 ball6.innerText = sample[5];
-ball7.innerText = sample[6];
+ball7.innerText = bonusNumber;
 
 const desc = document.querySelector(".desc");
 function getdate() {
